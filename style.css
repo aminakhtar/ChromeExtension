@@ -24,24 +24,13 @@
     font-size: small;
     min-height: 50px;
 }
-.btnouter
-{
-    padding: 10px;
-}
-#btnactivity{
+
+#btnactivity, #btnfriendinvite{
     padding: 5px;
     border-radius: 25px;
     background-color: #00acc9;
     color: white;
     border-color: #00acc9;
-}
-#btnfriendinvite
-{
-    /* #15c39 */
-    background-color: #40738d;
-    color: white;
-    border-color: #40738d;
-    border-radius: 25px;
 }
 
 

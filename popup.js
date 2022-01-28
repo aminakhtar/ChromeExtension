@@ -9,11 +9,15 @@ const shareData = {
 }
 
 const invite = 'Hi my friend, I am going to do this activity: . Would you like to join me?';
+const btnShare = document.getElementById('btnfriendinvite');
+const btnactivity = document.getElementById('btnactivity');
 
 function GetActivity(){
 
-    btnShare.disabled = true;
-    
+    //btnShare.disabled = true;
+    btnShare.style.display = 'none';
+    btnactivity.style.display = 'none';
+
     showLoader();
     var link = "https://www.boredapi.com/api/activity"
     var x = new XMLHttpRequest();
@@ -31,8 +35,9 @@ function GetActivity(){
 
         hideLoader();
 
-        btnShare.disabled = false;
-    
+        //btnShare.disabled = false;
+        btnShare.style.display = 'inline-block';
+        btnactivity.style.display = 'inline-block';
     };
     x.send();
 }
@@ -55,9 +60,6 @@ function hideLoader() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("resultDiv").style.display = "block";
 }
-
-
-const btnShare = document.getElementById('btnfriendinvite');
 
 // Share must be triggered by "user activation"
 btnShare.addEventListener('click', async () => {
